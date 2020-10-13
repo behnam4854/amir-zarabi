@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "iranBlack";
+    src: url("IRANSansWeb(FaNum)_Black.woff");
+    }
+  @font-face {
+    font-family: "iranBold";
+    src: url("IRANSansWeb(FaNum)_Bold.woff");
+    }
+      
+  @font-face {
+    font-family: "iranMed";
+    src: url("IRANSansWeb(FaNum)_Medium.woff");
+    }
+
+
+body{
+    font-family: "iranMed";
+    direction: rtl;
+    text-align: right;
+  }
+
+.sidebar .nav-item .nav-link {
+    text-align: right;
+}
+.nav-link span {
+    display: inherit;
+}

@@ -1,0 +1,83 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<img src="../../static/img/bg2-01.svg" class="img-fluid"  alt="">
+<a href="#target">
+    <div class="arrow-down">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</a>
+
+<div class="container-fluid " id="target" style="margin-bottom: 10%;">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-auto">
+            <h2 class=" mt-5 header-mazaya">مزایای برگزاری کلاس آنلاین</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center ml-2 mr-2 zoom">
+            <div class="card card-1">
+                <img src="../../static/img/up-01.jpg" style="border-radius: 30px;" class="img-fluid">
+            </div>
+            <h5>هزینه کمتر</h5>
+        </div>
+        <div class="col text-center ml-2 mr-2 zoom">
+            <div class="card card-1">
+                <img src="../../static/img/up-02.jpg" style="border-radius: 30px;" class="img-fluid">
+            </div>
+            <h5>راحتی و در دسترس بودن</h5>
+        </div>
+        <div class="col text-center ml-2 mr-2 zoom">
+            <div class="card card-1">
+                <img src="../../static/img/up-03.jpg" style="border-radius: 30px;"  class="img-fluid">
+            </div>
+            <h5>کاهش شیوع بیماری</h5>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" >
+    <div class="row mt-4">
+        <div class="col-xl-3 text-right ">
+            <img style="margin-right: -20px;" src="../../static/img/sabetnam-konid2-01.png" style="border-radius: 30px;" class="img-fluid">
+            <p style="text-align: justify;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+        </div>
+        <div class="col-xl-9 text-center">
+            <img  src="../../static/img/jaklin-718.webp"  >
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bottom-bg" style="height: 150vh;">
+    <div class="container pt-10" >
+        <div class="row text-center justify-content-center" style="color: white;" >
+            <h2>ورود به بخش آموزش</h2>
+
+        </div>
+        <hr style="background-color: white;max-width: 300px;">
+        <div class="row justify-content-center align-items-end mt-5">
+            <a href="{% url 'blog:videolist' %}" class="zoom">
+                <div class="col-4">
+                    <div class="card card-1 paeen-1" >
+                    </div>
+                </div>
+            </a>
+            <a href="{% url 'blog:videolist' %}" class="zoom">
+                <div class="col-4">
+                    <div class="card card-1 paeen-2">
+                    </div>
+                </div>
+            </a>
+
+          </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

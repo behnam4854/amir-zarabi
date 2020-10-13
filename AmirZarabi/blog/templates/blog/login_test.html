@@ -1,0 +1,46 @@
+<html lang="en">
+  {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+</head>
+<body>
+<div class="container-fluid login-bg " style="height: 100vh;" >
+    <div class="row pt-5 justify-content-center login-bg-v2" >
+        <div class="col-8" style="height: 80vh;border-radius: 20px;box-shadow:  0px 4px 34px -6px rgba(0,0,0,0.62);" >
+            <div class="row pt-10 ">
+                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 d-flex justify-content-xl-center justify-content-md-start justify-content-sm-start align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-sm-12 col-md-10" style="direction: rtl;">
+                        <form class="text-right" action="{% url 'blog:user_login' %}" method="post">
+                          {% csrf_token %}
+                            <div class="form-group">
+                              <label for="username">نام کاربری</label>
+                              <input class="form-control" name="username" type="text" >
+                            </div>
+                            <div class="form-group">
+                              <label for="password1">رمز عبور</label>
+                              <input type="password" class="form-control" name="password" >
+                            </div>
+                            <button type="submit" class="btn btn-secondary" style="background: #12214d;">ورود</button>
+                          </form>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-3 d-none d-lg-flex align-content-center">
+                    <img src="../../static/img/logo-01.png" style="max-width: 80%;" class="img-fluid img-md-login"  alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>

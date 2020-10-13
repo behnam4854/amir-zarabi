@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container pt-5">
+    <div class="row text-right">
+        <div class="col-4">
+            <h2>ویدیوهای آموزشی</h2>
+            <hr>
+            {% if user.is_authenticated %}
+            <p>
+              <a href="{% url 'blog:upload_video' %}" class="btn btn-secondary">آپلود ویدیو</a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5">
+    <div class="row">
+        {% for video in videos %}
+            <div class="col-4 text-right">
+                <a href="{% url 'blog:video_detail' pk=video.pk %}"><img src="{{ video.cover.url }}" style="max-width: 300px;" alt=""></a>
+                <p class="pt-2">{{ video.title }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
